@@ -1,7 +1,8 @@
 import artAndlife from "../../../assets/Art & Life.svg";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import moment from "moment";
+import artLifeBanner from "../../../assets/artLifeBanner.jpeg";
 
 const ArtHome = () => {
   const mediaQueryStyles = `
@@ -28,10 +29,9 @@ const ArtHome = () => {
           cumque molestiae rerum.
         </Marquee>
       </div>
-  
       <Container>
-        <Row className="g-4" >
-          <Col xs ={12} md={12} lg={6}>
+        <Row className="g-4">
+          <Col xs={12} md={12} lg={6}>
             <p
               style={{
                 color: "black",
@@ -43,7 +43,7 @@ const ArtHome = () => {
               Don’t close your eyes
             </p>
           </Col>
-          <Col xs ={12} md={12} lg={6}>
+          <Col xs={12} md={12} lg={6}>
             <div className="text-justify mt-5">
               <p>
                 Lorem ipsum, sfghsdfgdolotur adipisicidfddgng elit. Nemo a
@@ -78,6 +78,16 @@ const ArtHome = () => {
           </Col>
         </Row>
       </Container>
+      {/* artAndlife image */}
+      <div className="mt-5" style={{ height: "50vh", width: "100%" }}>
+        <img
+          src={artLifeBanner}
+          className="img-fluid rounded"
+          style={{ objectFit: "cover", width: "100%", height: "100%" }}
+          alt="Responsive image"
+        />
+      </div>
+      
     </Container>
   );
 };
